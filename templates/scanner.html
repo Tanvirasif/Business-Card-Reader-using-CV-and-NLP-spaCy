@@ -1,0 +1,49 @@
+{% extends "index.html" %} {% block body %} <br /><br />
+
+<h4>Upload the Business Card to Scan</h4>
+<br />
+
+<div class="row">
+  <form action="#" method="POST" enctype="multipart/form-data">
+    <div class="input-group">
+      <input type="file" class="form-control" name="image_name" required />
+      <input type="submit" value="Upload Image" class="btn btn-primary" />
+    </div>
+  </form>
+</div>
+
+<br />
+
+<div class="row">
+  {% if fileupload %}
+
+  <div class="row">
+    <button class="btn btn-primary" id="sendData">
+      Wrap Business Card and Extract Entities
+    </button>
+  </div>
+
+  {% endif %}
+</div>
+
+<!-- Creating CANVAS (display resized images here)-->
+{% if fileupload %}
+<br />
+<h5><p>{{ message }}</p></h5>
+<br />
+<div class="row">
+  <div class="col">
+    <canvas
+      id="canvas"
+      style="max-width: 100%; height: auto; border: 1px solid #000000"
+    ></canvas>
+  </div>
+
+  <div class="col" id="loader" align="center"></div>
+</div>
+
+<script>
+  loadPoints({{ points | tojson }})
+</script>
+
+{% endif %} {% endblock %}

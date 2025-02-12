@@ -1,0 +1,157 @@
+{% extends 'index.html' %}
+
+{% block body %}
+<br>
+
+<style>
+    img {
+        max-width: 50%;
+        border: 2px solid #007BFF;
+        border-radius: 50%;
+    }
+</style>
+
+<h3>CSE499 (Captsone Design) Project - Business Card Reader by using CV and NLP</h3>
+
+<p>
+    <br>Business Card Reader: We use Named Entity Recognition (NER) and optical character recognition (OCR) to extract text and data from the business card.
+
+    <br><br>The project's primary goal is to remove the entities from business cards. Our work used six entities: name, organization, phone number, email address, and website. We employ the most popular data science technologies to construct this project: Natural Language Processing (NLP) and Computer Vision (CV).
+    
+    <br><br>After scanning the business card and locating the text, Computer Vision extracts the text from the picture. TesseractOCR and OpenCV are the tools we utilize to do Computer Vision jobs.
+
+    <br><br>Textual elements are extracted by Natural Language Processing. Here, we additionally clean up and preprocess the text as needed and extract the entity from it. SpaCy and Pandas are used for NLP operations.
+    
+    <br><br>We take advantage of the Python environment overall.
+</p>
+
+<p><strong>Python Libraries used in Computer Vision Module:</strong></p>
+<ul>
+    <li>OpenCV</li>
+    <li>Numpy</li>
+    <li>Pytesseract</li>
+</ul>
+<p><strong>Python Libraries used in Natural Language Processing:</strong></p>
+<ul>
+    <li>SpaCy</li>
+    <li>Pandas</li>
+</ul>
+<br>
+<p><strong>Developed by</strong></p>
+<div class='row'>
+    <div class='col'>
+        <img class="img-fluid border border-primary" src="/static/about/saiful.jpg">
+
+        <table>
+            <tr>
+                <td>Name: Mohammad Saiful Islam</td>
+            </tr>
+            <tr>
+                <td>ID: 1922071042</td>
+            </tr>
+            <tr>
+                <td>Email: saiful.islam23@northsouth.edu</td>
+            </tr>
+        </table>
+
+    </div>
+
+    <div class='col'>
+        <img class="img-fluid border border-primary" src="/static/about/kamrul.jpg">
+
+        <table>
+            <tr>
+                <td>Name: Kamrul Hassan Jony</td>
+            </tr>
+            <tr>
+                <td>ID: 1921537042</td>
+            </tr>
+            <tr>
+                <td>Email: kamrul.jony@northsouth.edu</td>
+            </tr>
+        </table>
+    </div>
+    <div class='col'>
+        <img class="img-fluid border border-primary" src="/static/about/tanvir.jpg">
+
+        <table>
+            <tr>
+                <td>Name: Tanvir Ahmed</td>
+            </tr>
+            <tr>
+                <td>ID: 1921432642</td>
+            </tr>
+            <tr>
+                <td>Email: tanvir.ahmed13@northsouth.edu</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class='col'>
+        <img class="img-fluid border border-primary" src="/static/about/mim.jpg">
+
+        <table>
+            <tr>
+                <td>Name: Syeda Mim</td>
+            </tr>
+            <tr>
+                <td>ID: 1821635642</td>
+            </tr>
+            <tr>
+                <td>Email: syeda.mim@northsouth.edu</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<br><br>
+
+
+<p><strong>Under the supervision of</strong></p>
+<br>
+
+<div class="container1">
+    <div class="image">
+        <img src="/static/about/hsm_sir.jpg">
+    </div>
+    <div class="text1">
+        <h5><strong>Name:</strong> Md. Shahriar Hussain</h5>
+        <h5><strong>Designation:</strong> Senior Lecturer</strong></h5>
+        <h5>Department of Electrical and Computer Engineering</h5>
+        <h5>Dhaka, Bangladesh.</h5>
+        <h5><strong>Email:</strong> shahriar.hussain01@northsouth.edu</h5>
+    </div>
+</div>
+
+<style>
+
+	.container1 {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+        .image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .text1 {          
+            text-align: left;
+            margin-top: 20px;
+            border: 1px solid #000;
+            padding: 10px;
+            height: 175px;
+        }
+        @media (max-width: 768px) {
+            .container1 {
+                flex-direction: column;
+            }
+            .image, .text1 {
+                flex: 1;
+            }
+        }
+    
+</style>
+
+{% endblock %}
